@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Column Layout</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      min-height: 100vh;
+    }
+
+    .header, .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .text {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">Header</header>
+    <div class="content">
+      <div class="text">This is the text section.</div>
+      <div class="image"><img src="https://via.placeholder.com/300" alt="Sample Image"></div>
+    </div>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>
